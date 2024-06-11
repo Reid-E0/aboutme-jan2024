@@ -20,20 +20,14 @@ header {
   display: flex;
   margin: auto;
   width: 100%;
+  background-color: whitesmoke;
 }
-/*old button {
-  margin: 25px;
-  border-radius: 10px;
-  box-shadow: 9 3 2 2px rgba(204, 200, 170, 0.15);
-  background-color: #ccd5ae;
-  animation-duration: 2.5s;
-  animation-name: fadeIn;
-  color: #003049;
+.chooseBGColor {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: left;
 }
-button:hover {
-  background-color: #00c0ff;
-  color: #fefae0;
-} */
 a {
   text-decoration: none;
 }
@@ -88,6 +82,7 @@ a:hover {
   border: 3px solid #ccd5ae;
   padding-right: 55px;
   padding-left: 55px;
+  background-color: whitesmoke;
 }
 .box,
 h1 {
@@ -113,7 +108,7 @@ h1 {
     opacity: 1;
   }
 }
-img {
+.cardImage {
   width: 125px;
   height: 175px;
 }
@@ -139,4 +134,15 @@ summary {
   align-items: center;
   flex-flow: column nowrap;
   padding: 5px;
+}
+.dogBox {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+#dogImage {
+  padding-top: 15px;
+  width: 245px;
+  height: 260px;
 }
