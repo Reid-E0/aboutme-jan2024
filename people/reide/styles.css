@@ -15,6 +15,10 @@ h1 {
 }
 header {
   background-color: #e9edc9;
+  display: flex;
+  padding: 15px;
+  margin: 15px;
+  justify-content: space-between;
 }
 .box {
   display: flex;
@@ -27,6 +31,8 @@ header {
   width: 100%;
   display: flex;
   justify-content: left;
+  margin: 15px;
+  padding: 15px;
 }
 a {
   text-decoration: none;
@@ -71,11 +77,9 @@ a:hover {
   align-items: center;
   gap: 10%;
 }
-
 .contact-item {
   width: 50%;
 }
-
 .bigBox {
   margin: auto;
   width: 50%;
@@ -83,6 +87,7 @@ a:hover {
   padding-right: 55px;
   padding-left: 55px;
   background-color: whitesmoke;
+  color: black;
 }
 .box,
 h1 {
@@ -128,7 +133,7 @@ summary {
 }
 .card {
   flex: 0 1 calc(25% - 1em);
-  border: solid 1px red;
+  border: solid 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,4 +150,16 @@ summary {
   padding-top: 15px;
   width: 245px;
   height: 260px;
+  cursor: pointer;
+}
+#modeSwitchBtn {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  padding: 15px;
+  margin: 15px;
+}
+.dark-mode {
+  background-color: rgb(47, 47, 47);
+  color: #003049;
 }

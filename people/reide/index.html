@@ -9,10 +9,43 @@
   <body>
     <header>
       <h1>About Me: Reid E.</h1>
+      <button onclick="toggleDarkMode()" id="modeSwitchBtn">
+        <svg width="30" height="30" id="light-icon">
+          <circle cx="15" cy="15" r="6" fill="currentColor" />
+
+          <line
+            id="ray"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            x1="15"
+            y1="1"
+            x2="15"
+            y2="4"
+          ></line>
+
+          <use href="#ray" transform="rotate(45 15 15)" />
+          <use href="#ray" transform="rotate(90 15 15)" />
+          <use href="#ray" transform="rotate(135 15 15)" />
+          <use href="#ray" transform="rotate(180 15 15)" />
+          <use href="#ray" transform="rotate(225 15 15)" />
+          <use href="#ray" transform="rotate(270 15 15)" />
+          <use href="#ray" transform="rotate(315 15 15)" />
+        </svg>
+        <svg width="30" height="30" id="dark-icon">
+          <path
+            fill="currentColor"
+            d="
+            M 23, 5
+            A 12 12 0 1 0 23, 25
+            A 12 12 0 0 1 23, 5"
+          />
+        </svg>
+      </button>
     </header>
     <div>
       <main>
-        <div class="chooseBGColor">
+        <!-- <div class="chooseBGColor">
           <form>
             <label for="chooseBGColor">Choose Your Background Color</label>
             <br />
@@ -23,7 +56,7 @@
               id="chooseBGColor"
             />
           </form>
-        </div>
+        </div> -->
         <div class="bigBox">
           <div class="box">
             <p id="intro">
@@ -87,42 +120,15 @@
           </details>
         </div>
         <div class="dogBox">
-          <button name="dogButton">
+          <button name="dogButton" id="dogButton">
             <img id="dogImage" src="" alt="" />
+            <p>Dogs are great too!</p>
           </button>
         </div>
       </main>
     </div>
-    <script>
-      const dogs = [];
-      function fetchNewDog() {
-        fetch('https://random.dog/woof.json')
-          .then((response) => response.json())
-          .then((data) => {
-            document.getElementById('dogImage');
-            dogImage.src = data.url;
-          });
-      }
-      function addDog() {
-        let dogImage = document.getElementsByClassName(dogImage);
-        let newDog = document.createElement('img');
-        newDog.src = dogImage.src;
-        let dogBox = document.getElementsByClassName(dogBox);
-        dogBox.appendChild(newDog);
-      }
-      // addDog function may need to move.
-      document.addEventListener('click', (e) => {
-        fetchNewDog();
-        addDog();
-      });
-      document.addEventListener('DOMContentLoaded', () => {
-        document
-          .getElementById('chooseBGColor')
-          .addEventListener('input', (e) => {
-            document.body.style.backgroundColor = e.target.value;
-          });
-      });
-    </script>
+    <script src="dogAPI.js"></script>
+    <script src="darkMode.js"></script>
   </body>
   <footer class="contact-container" id="contact">
     <div class="contact-content">
